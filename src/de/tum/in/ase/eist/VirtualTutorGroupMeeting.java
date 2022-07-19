@@ -21,6 +21,7 @@ public class VirtualTutorGroupMeeting extends TutorGroupMeeting {
 	public void sayWelcome(Student tutor) {
 		tutor.say("Welcome to the virtual tutor meeting");
 		tutor.say("Thank you for joining using " + url.toString() + " today.");
+		tutor.say("Please turn on your cameras");
 	}
 
 	@Override
