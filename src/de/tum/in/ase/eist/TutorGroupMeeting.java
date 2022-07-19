@@ -1,30 +1,22 @@
 package de.tum.in.ase.eist;
 
 public abstract class TutorGroupMeeting {
-    private final TimeSlot timeSlot;
-    private final TutorGroup tutorGroup;
-    private final Skill skillToPractice;
-
-
+    static final int NUMBER_OF_HOMEWORK_PRESENTATIONS = 3;
+    protected final TimeSlot timeSlot;
+    protected final TutorGroup tutorGroup;
+    protected final Skill skillToPractice;
 
     public TutorGroupMeeting(TimeSlot timeSlot, TutorGroup tutorGroup, Skill skillToPractice) {
         this.timeSlot = timeSlot;
         this.tutorGroup = tutorGroup;
         this.skillToPractice = skillToPractice;
     }
-    public TutorGroup getTutorGroup() {
-        return tutorGroup;
-    }
 
-    public Skill getSkillToPractice() {
-        return skillToPractice;
-    }
+    public abstract TutorGroup getTutorGroup();
 
-    public TimeSlot getTimeSlot() {
-        return timeSlot;
-    }
+    public abstract Skill getSkillToPractice();
 
+    public abstract TimeSlot getTimeSlot();
 
-
-    abstract void practice();
+    public abstract void practice();
 }

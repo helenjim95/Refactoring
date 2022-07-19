@@ -6,13 +6,26 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class PhysicalTutorGroupMeeting extends TutorGroupMeeting {
 
-	private static final int NUMBER_OF_HOMEWORK_PRESENTATIONS = 3;
-
 	private final String room;
 
 	public PhysicalTutorGroupMeeting(TimeSlot timeSlot, TutorGroup tutorGroup, Skill skillToPractice, String room) {
 		super(timeSlot, tutorGroup, skillToPractice);
 		this.room = room;
+	}
+
+	@Override
+	public TutorGroup getTutorGroup() {
+		return tutorGroup;
+	}
+
+	@Override
+	public Skill getSkillToPractice() {
+		return skillToPractice;
+	}
+
+	@Override
+	public TimeSlot getTimeSlot() {
+		return timeSlot;
 	}
 
 	public String getRoom() {
