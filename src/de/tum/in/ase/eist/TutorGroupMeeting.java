@@ -30,7 +30,7 @@ public abstract class TutorGroupMeeting {
 
     public void practice() {
         Student tutor = getTutorGroup().getTutor();
-        tutor.say("Welcome to the physical tutor meeting");
+
         sayWelcome(tutor);
         tutor.say("We start with the homework presentation");
 
@@ -65,11 +65,7 @@ public abstract class TutorGroupMeeting {
         }
     }
 
-    public void sayWelcome(Student tutor) {
-        tutor.say("Thank you for coming here today.");
-    }
+    abstract void sayWelcome(Student tutor);
 
-    public void sayThankYou(Student tutor) {
-        tutor.say("Thank you that you have participated today.");
-    }
+    abstract void sayThankYou(Student tutor);
 }

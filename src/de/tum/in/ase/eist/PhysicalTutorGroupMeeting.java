@@ -18,6 +18,7 @@ public class PhysicalTutorGroupMeeting extends TutorGroupMeeting {
 
 	@Override
 	public void sayWelcome(Student tutor) {
+		tutor.say("Welcome to the physical tutor meeting");
 		tutor.say("Thank you for coming to " + room + " today.");
 	}
 

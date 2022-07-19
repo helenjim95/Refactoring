@@ -7,7 +7,6 @@ import java.time.LocalTime;
 
 public final class Main {
 	private Main() {
-
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
@@ -41,5 +40,4 @@ public final class Main {
 				new URL("https://tum-conf.zoom.us/j/99711605391?pwd=R3NjVGs2Y2lReVVXdk1ZaFBSMk9sUT09"));
 		virtualTutorGroup.practice();
 	}
-
 }
