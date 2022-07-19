@@ -36,7 +36,7 @@ public final class Main {
 		Student studentOnline = new Student("Tobias", 20, "ga55zzz", "03141592", 2);
 		tutorGroup2.register(studentOnline);
 
-		VirtualTutorGroupMeeting virtualTutorGroup = new VirtualTutorGroupMeeting(timeSlot2, tutorGroup2,
+		VirtualTutorGroupMeeting virtualTutorGroup = new VirtualTutorGroupMeeting(room, timeSlot2, tutorGroup2,
 				softwareQualityManagement,
 				new URL("https://tum-conf.zoom.us/j/99711605391?pwd=R3NjVGs2Y2lReVVXdk1ZaFBSMk9sUT09"));
 		virtualTutorGroup.practice();
