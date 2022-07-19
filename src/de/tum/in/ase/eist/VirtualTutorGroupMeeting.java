@@ -17,21 +17,13 @@ public class VirtualTutorGroupMeeting extends TutorGroupMeeting {
 		return url;
 	}
 
-	public void practice() {
-		Student tutor = getTutorGroup().getTutor();
-		tutor.say("Welcome to the virtual tutor meeting");
+	@Override
+	public void sayWelcome(Student tutor) {
 		tutor.say("Thank you for joining using " + url.toString() + " today.");
-		tutor.say("Please turn on your cameras");
-		tutor.say("We start with the homework presentation");
+	}
 
-		List<Student> homeworkPresentationCandidates = new ArrayList<>(getTutorGroup().getStudents());
-		present(homeworkPresentationCandidates);
-
-		tutor.say("Next is the group work");
-		learnSkill();
-
-		tutor.say("Let's have a look at the new homework");
+	@Override
+	public void sayThankYou(Student tutor) {
 		tutor.say("Thank you that you have participated using the " + url + " today.");
-		tutor.say("See you next time!");
 	}
 }

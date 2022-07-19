@@ -17,20 +17,12 @@ public class PhysicalTutorGroupMeeting extends TutorGroupMeeting {
 	}
 
 	@Override
-	public void practice() {
-		Student tutor = getTutorGroup().getTutor();
-		tutor.say("Welcome to the physical tutor meeting");
+	public void sayWelcome(Student tutor) {
 		tutor.say("Thank you for coming to " + room + " today.");
-		tutor.say("We start with the homework presentation");
+	}
 
-		List<Student> homeworkPresentationCandidates = new ArrayList<>(getTutorGroup().getStudents());
-		present(homeworkPresentationCandidates);
-
-		tutor.say("Next is the group work");
-		learnSkill();
-
-		tutor.say("Let's have a look at the new homework");
+	@Override
+	public void sayThankYou(Student tutor) {
 		tutor.say("Thank you that you have participated in " + room + " today.");
-		tutor.say("See you next time!");
 	}
 }

@@ -1,5 +1,6 @@
 package de.tum.in.ase.eist;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -27,7 +28,22 @@ public abstract class TutorGroupMeeting {
         return timeSlot;
     }
 
-    public abstract void practice();
+    public void practice(String groupType) {
+        Student tutor = getTutorGroup().getTutor();
+        tutor.say("Welcome to the physical tutor meeting");
+        sayWelcome(tutor);
+        tutor.say("We start with the homework presentation");
+
+        List<Student> homeworkPresentationCandidates = new ArrayList<>(getTutorGroup().getStudents());
+        present(homeworkPresentationCandidates);
+
+        tutor.say("Next is the group work");
+        learnSkill();
+
+        tutor.say("Let's have a look at the new homework");
+        sayThankYou(tutor);
+        tutor.say("See you next time!");
+    }
 
     public void present(List<Student> homeworkPresentationCandidates) {
         for (int i = 0; i < NUMBER_OF_HOMEWORK_PRESENTATIONS; i++) {
@@ -47,5 +63,13 @@ public abstract class TutorGroupMeeting {
         for (Student student : getTutorGroup().getStudents()) {
             student.learnSkill(skill);
         }
+    }
+
+    public void sayWelcome(Student tutor) {
+        tutor.say("Thank you for coming here today.");
+    }
+
+    public void sayThankYou(Student tutor) {
+        tutor.say("Thank you that you have participated today.");
     }
 }
