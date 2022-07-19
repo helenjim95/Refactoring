@@ -28,7 +28,7 @@ public abstract class TutorGroupMeeting {
         return timeSlot;
     }
 
-    public void practice(String groupType) {
+    public void practice() {
         Student tutor = getTutorGroup().getTutor();
         tutor.say("Welcome to the physical tutor meeting");
         sayWelcome(tutor);
