@@ -5,6 +5,8 @@ public abstract class TutorGroupMeeting {
     private final TutorGroup tutorGroup;
     private final Skill skillToPractice;
 
+
+
     public TutorGroupMeeting(TimeSlot timeSlot, TutorGroup tutorGroup, Skill skillToPractice) {
         this.timeSlot = timeSlot;
         this.tutorGroup = tutorGroup;
@@ -21,6 +23,8 @@ public abstract class TutorGroupMeeting {
     public TimeSlot getTimeSlot() {
         return timeSlot;
     }
+
+
 
     abstract void practice();
 }

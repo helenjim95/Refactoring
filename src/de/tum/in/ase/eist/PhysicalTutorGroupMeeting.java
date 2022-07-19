@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class PhysicalTutorGroupMeeting extends TutorGroupMeeting {
 
 	private static final int NUMBER_OF_HOMEWORK_PRESENTATIONS = 3;
+
 	private final String room;
 
 	public PhysicalTutorGroupMeeting(TimeSlot timeSlot, TutorGroup tutorGroup, Skill skillToPractice, String room) {
